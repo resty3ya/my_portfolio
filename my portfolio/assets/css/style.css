@@ -1,0 +1,22 @@
+#home,#about,#portfolio,#skills{
+    border-style: solid;
+    border-color: #E5E5E5;
+}
+
+#services{
+    background-color: #E5E5E5;
+    border-style: solid;
+    border-color: #E5E5E5;
+}
+
+#footer{
+    border-style: solid;
+    border-color: #C4C4C4;
+    background-color: #C4C4C4;
+}
+
+#contact{
+    background-color: #E5E5E5;
+    border-style: solid;
+    border-color: #E5E5E5;
+}
