@@ -1,12 +1,9 @@
-#home,#about,#portfolio,#skills{
-    border-style: solid;
-    border-color: #E5E5E5;
+body{
+    font-family: Noto Sans;
 }
 
 #services{
     background-color: #E5E5E5;
-    border-style: solid;
-    border-color: #E5E5E5;
 }
 
 #footer{
@@ -17,6 +14,21 @@
 
 #contact{
     background-color: #E5E5E5;
+}
+
+/*webpage border color class*/
+.gray-border{
     border-style: solid;
     border-color: #E5E5E5;
 }
+
+/*h3 font color class*/
+.font-brown-color{
+    color: #78252D;
+}
+
+/*Child Selector*/
+/*p>a{}*/
+
+/*Descendants Selector*/
+/*body a{}*/
