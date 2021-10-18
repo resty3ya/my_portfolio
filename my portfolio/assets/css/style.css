@@ -1,29 +1,124 @@
 body{
-    font-family: Noto Sans;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0 auto;
 }
 
-nav{
-        
+header{
+    height: 12em;
+}
+
+
+/*       HOME     */
+
+.container-home{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 5% auto;
+    grid-template-areas: "header header header header"
+                        "sidebar-left main-1 main-2 sidebar-right";
+}
+
+nav {
+    grid-area: header;
     display: flex;
-    justify-content: flex-end;
+    justify-content: end;
     margin-right: 1.5rem;
+    padding-top: 15px;
+    padding-right: 7em;
 }
 
 nav>a{
-    margin-right: .5em;
+    margin-right: 24px;
+    font-size: 23px;
+    text-decoration: none;
+    justify-items: end;
 }
-#home{
-    margin-top: 10em;
+
+
+.main-1{
+    grid-area: main-1;
+    height: 20em;
+    padding-top: 12em;
+    justify-self: center;
 }
+
+.main-2{
+    grid-area: main-2;
+    justify-self: start;
+    padding-top: 10em;
+}
+
+#imgLanding{
+    width: 13em;
+    height: 26em;
+    margin: -4em;
+}
+
+
+/*   SERVICES         */
+
+.container-services{
+    display: grid;
+    grid-template-columns: 10% 20% 20% 20% auto;
+    grid-template-rows: 20% 20% 30% 30%;
+    grid-auto-rows: minmax(10em, auto);
+    grid-template-areas: "top top top top top"
+                        "content content content content content"
+                        "aside-1 box-row-1 box-row-1 box-row-1 aside-2"
+                        "aside-3 box-row-2 box-row-2 box-row-2 aside-4";
+}
+
+.item-services-top{
+    grid-area: top;
+    justify-self: center;
+}
+
+.item-services-content{
+    grid-area: content;
+}
+
+.item-services-box-1{
+    grid-area: box-row-1;
+    justify-self: center;
+}
+
+.item-services-box-2{
+    grid-area: box-row-2;
+}
+
+
+
+
+/*
 
 #services{
     background-color: #E5E5E5;
+    height: 47em;
+    padding-left: 23em;
+    padding-right: 25em;
 }
+
+#services > h1 {
+    text-align: center;
+}
+
+#services > h3 {
+    text-align: center;
+}
+
+#services > p {
+    padding-right: 5em;
+    padding-left: 5em;
+}
+*/
+
+/*   FOOTER    */
 
 #footer{
     border-style: solid;
     border-color: #C4C4C4;
     background-color: #C4C4C4;
+    display: flex;
 }
 
 #contact{
@@ -74,6 +169,7 @@ nav>a{
     min-height: 100px;
     background-color: #ffff;
     padding-left: 10px;
+    float: left;
 }
 
     /*
@@ -104,7 +200,73 @@ nav>a{
     
     */
 
+    /*
+.float-right{
+    float: right;
+}
 
+.float-left{
+    float: left;
+}
+*/
+    /*
+    floating box
+
+    .box{
+        height: 130px;
+        width: 130px;
+        margin-bottom: 10px;
+        margin-right: 10p;
+        float: left;
+
+        float is a property to specify the element to float left or right or follow the existing flow of box arrangement.
+
+        float: none|left|right|initial|inherit;
+
+        none - this will follow the default floating of the box and it also breaks the existing floating property set by it siblings or parent.
+
+        left and right- allows to element to float left to right
+
+        initial - custom value can be given to float  the element
+
+        inherit - follows the inheritance property  from its parent style.
+
+        clear: both - property will clear the floating of boxes next to each other.
+    }
+
+    .clearfix::after{
+        content:"";
+        clear:both;
+        display:table;
+
+        this code snippet is a famous hack that many developers use to clear any floating objects after the box
+    
+        content: ".";
+        this display the property you will learn next lesson
+        display: block;
+        clear: both;
+        height: 0;
+        hide the content that we placed above "."
+        visibility: hidden;
+    
+    }
+
+
+    display property controls the behaviour of the displaying of the page.
+    display:none; will hide that element on the page.
+    display: block will show the block
+    display: inline will show the block inline.
+
+
+    */
+
+.clearfix::after{
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+}
 
 /*h3 font color class*/
 .font-brown-color{
@@ -159,3 +321,18 @@ p::first-letter{
 /*css precedence - more element initialized (a, h1{}) is more precedent than individual initialization.
     also, div#id (div#tex-blue{})is more precedent that declared in html
 */
+
+
+
+/*   GRID  */
+
+ /*
+
+    kung hanggang saan mo gusto paabutin ang box mo
+    grid-column: start / end;
+    grid-row: span 2;
+    
+    
+*/
+
+

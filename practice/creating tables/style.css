@@ -1,0 +1,36 @@
+.container{
+    display: grid;
+    grid-template-columns: 25% auto 25%;
+    grid-template-rows: 15% auto;
+    grid-template-areas: "header header header"
+                        "sidebar-left main sidebar-right";
+
+}
+
+.header{
+    grid-area: header;
+    background-color: red;
+}
+
+.sidebar-left{
+    grid-area: sidebar-left;
+    background-color: blue;
+    /*
+
+    kung hanggang saan mo gusto paabutin ang box mo
+    grid-column: start / end;
+    grid-row: span 2;
+    
+    */
+    
+}
+
+
+.sidebar-right{
+    grid-area: sidebar-right;
+    background-color: pink;
+}
+
+.main{
+    grid-area: main;
+}
