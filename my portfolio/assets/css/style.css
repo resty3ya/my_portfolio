@@ -3,6 +3,7 @@ body{
     margin: 0 auto;
 }
 
+
 header{
     height: 12em;
 }
@@ -11,8 +12,9 @@ header{
 /*       HOME     */
 
 .container-home{
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% auto;
+    grid-template-columns: repeat(5, 20%);
     grid-template-rows: 10% auto;
     grid-template-areas: "header header header header header"
                         "sidebar-left main-1 main-2 main-3 sidebar-right";
@@ -57,6 +59,7 @@ nav>a{
 /*   SERVICES         */
 
 .container-services{
+    background-color: #E5E5E5;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% auto;
     grid-template-rows: 5% 20% auto auto;
@@ -142,7 +145,7 @@ nav>a{
     grid-area: middle-2;
     grid-column: 3 / span 2;
     padding-top: 3em;
-    margin-bottom: 11em;
+    margin-bottom: 2em;
 }
 
 .item-middle-5{
@@ -167,7 +170,6 @@ nav>a{
     list-style: none;
     margin-bottom: 1em;
 }
-
 
 
 
@@ -196,7 +198,79 @@ nav>a{
 
 /*   FOOTER    */
 
-#footer{
+.container-footer{
+    background-color: #C4C4C4;
+    background-image: radial-gradient(#fff,#e5e5e5,#C4C4C4);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: 15% auto;
+    grid-template-areas: "top top top top top"
+                        "side-1 side-2 main-1 main-2 side-3";
+}
+
+
+.footer-top{
+    grid-area: top;
+    display:flex;
+    margin: 0 auto;
+
+}
+
+
+.footer-top>ul{
+    align-content: end;
+    margin-left: 47em;
+    
+}
+
+.footer-top>ul li{
+    list-style: none;
+    display:inline;
+    list-style: none;
+}
+.footer-top>ul li a img{
+    height: 60px;
+}
+
+
+.footer-side-1{
+    grid-area: side-1;
+    justify-self: end;
+    padding-top: 2em;
+}
+.footer-side-1>ul li, .footer-side-2>ul li, .footer-main-1>ul li, .footer-main-2>ul li{
+    list-style: none;
+    margin-top: 10px;
+}
+
+.footer-side-2{
+    grid-area: side-2;
+    justify-self: center;
+    padding-top: 2em;
+}
+
+.footer-main-1{
+    grid-area: main-1;
+    padding-top: 2em;
+}
+
+.footer-main-2{
+    grid-area: main-2;
+    padding-top: 2em;
+}
+
+.footer-side-3{
+    grid-area: side-3;
+    padding-top: 10em;
+}
+
+#back-to-top{
+    padding-top: 12em;
+}
+
+/*#
+footer{
     border-style: solid;
     border-color: #C4C4C4;
     background-color: #C4C4C4;
@@ -209,7 +283,8 @@ nav>a{
 
 #services ul li{
     list-style-type: none;
-}
+}*/
+
 
 /*webpage border color class*/
 .gray-border{
@@ -413,4 +488,11 @@ p::first-letter{
     
 */
 
+
+@media (min-width: 1540px){
+    body{
+        margin: 0 auto;
+        min-width: auto;
+    }
+}
 
