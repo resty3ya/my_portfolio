@@ -14,7 +14,7 @@ header{
 .container-home{
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(5, 20%);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 10% auto;
     grid-template-areas: "header header header header header"
                         "sidebar-left main-1 main-2 main-3 sidebar-right";
@@ -488,11 +488,48 @@ p::first-letter{
     
 */
 
-
+/*
 @media (min-width: 1540px){
     body{
         margin: 0 auto;
         min-width: auto;
     }
+}
+*/
+
+
+
+/*      PORTFOLIO         */
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 5% 5% 1fr 1fr;
+    grid-template-areas: "top top top top top" 
+                        "list list list list list" 
+                        "side-1 main-1 main-2 main-3 side-2" 
+                        "side-3 main-4 main-5 main-6 side-4";
+    text-align: center;
+}
+
+.wrapper ul li{
+    list-style: none;
+}
+
+.wrapper ul{
+    display: flex;
+}
+
+.wrapper-top{
+    grid-area: top;
+}
+
+.wrapper-list{
+    grid-area: list;
+    grid-column: 3 / span 3;
+    
+}
+
+.wrapper-main{
+    grid-area: main-1;
 }
 
